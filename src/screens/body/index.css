@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "Exo-Light";
+  src: url("../../assets/fonts/Exo-Light.ttf");
+}
+@font-face {
+  font-family: "Exo-ExtraLight";
+  src: url("../../assets/fonts/Exo-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Exo-Medium";
+  src: url("../../assets/fonts/Exo-Medium.ttf");
+}
+.bodyMainContainer {
+  overflow: auto;
+}
+.bodyGridContainer {
+  width: 100vw;
+  min-height: 66vh;
+  height: auto;
+  background-image: url("https://img.freepik.com/premium-vector/hand-drawn-seamless-pattern-book-doodle-elements-education-concept_253081-84.jpg");
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 26px;
+}
+
+.box {
+  border: 1px solid black;
+  transition: 0.5s;
+  padding-top: 10px;
+
+  width: 300px;
+  height: 370px;
+  overflow-x: scroll;
+  margin: 40px;
+  background-color: #fff;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+.bookCategory {
+  font-family: "Exo-Light" !important;
+  text-decoration: underline;
+}
+.bookTitle {
+  font-family: "Exo-Medium" !important;
+}
+.bookAuthor {
+  font-family: "Exo-ExtraLight" !important;
+}
+.notFoundText {
+  font-family: "Exo-Medium";
+  color: red;
+  font-size: 29px;
+  width: 90%;
+  text-align: center;
+}
+.aboutBook {
+  width: 90%;
+  /* height: 25%; */
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}

@@ -1,0 +1,30 @@
+.selectedBookContainer {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+}
+.imageBox {
+  width: 47%;
+  height: 100%;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutBookBox {
+  width: 53%;
+  height: 100%;
+  padding: 1.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.selBookDescription {
+  height: 40%;
+  overflow-x: scroll;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+}

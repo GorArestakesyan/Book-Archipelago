@@ -1,0 +1,60 @@
+.filterContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+.filterBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Exo-Light" !important;
+  text-align: center;
+}
+.filterByText {
+  padding: 0 10px;
+  text-align: center;
+  font-family: "Exo-Light" !important;
+  font-size: 23px !important;
+
+  color: #000000;
+}
+.headerTitle {
+  font-size: 24px !important;
+  font-family: "Exo-Medium" !important;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.517);
+  padding: 10px;
+  border-radius: 20px;
+}
+.headerMain {
+  width: 100vw;
+  background-image: url("https://media1.thehungryjpeg.com/thumbs2/ori_3640123_3l7mjhcaxzfkpsefqhle43i56egp3jrrw9874zo5_sketch-vintage-books-seamless-pattern-or-background.jpg");
+  height: 34vh;
+  display: flex;
+  flex-direction: column;
+}
+.headerFilter {
+  width: 100%;
+  height: 100%;
+  filter: sepia(1);
+}
+.headerMainBox {
+  height: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+@media only screen and (max-width: 600px) {
+  .filterContainer {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+  }
+  .headerMainBox {
+    width: unset;
+  }
+}
