@@ -39,8 +39,6 @@ function Body() {
               <Grid
                 item
                 key={book.etag}
-                // justifyItems={"center"}
-                // alignItems={"center"}
                 sx={{
                   "&:hover": {
                     transform: "scale(1.05)",

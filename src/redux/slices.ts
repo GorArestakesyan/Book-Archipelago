@@ -37,12 +37,7 @@ export const booksSlice = createSlice({
     setInputText: (state, action: PayloadAction<string>) => {
       state.inputText = action.payload;
     },
-    setLoadedBooks: (state, action: PayloadAction<Item[]>) => {
-      state.books = [...state.books, ...action.payload];
-    },
-    setMaxResults: (state, action: PayloadAction) => {
-      state.maxResults = state.maxResults + 30;
-    },
+
     setSortBy: (state, action: PayloadAction<string>) => {
       state.sortBy = action.payload;
     },
@@ -84,9 +79,7 @@ export const {
   setLoading,
   setCategory,
   setInputText,
-  setMaxResults,
   setFindedItems,
-  setLoadedBooks,
 } = booksSlice.actions;
 
 export default booksSlice.reducer;
