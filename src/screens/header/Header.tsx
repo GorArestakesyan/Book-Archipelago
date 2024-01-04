@@ -1,17 +1,21 @@
 import { Box, MenuItem, Select, Typography } from "@mui/material";
 import React, { useCallback } from "react";
 import CustomInput from "../../components/customInput/CustomInput";
-import { useAppDispatch, useAppSelector } from "../../redux/store";
-
 import {
   googleBooksApi,
   resetBooks,
   setCategory,
   setSortBy,
 } from "../../redux/slices";
+import { useAppDispatch, useAppSelector } from "../../redux/store";
+
+import { useNavigate } from "react-router-dom";
 import "./index.css";
+
 const Header: React.FC = () => {
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
   const { inputText, category, page, sortBy } = useAppSelector(
     (state) => state.booksSlice
   );
@@ -37,11 +41,15 @@ const Header: React.FC = () => {
     [dispatch, inputText, category, page, sortBy]
   );
 
+  const handleNavHome = () => navigate("/");
+
   return (
     <Box className="headerMain">
       <Box className="headerFilter">
         <Box className="headerMainBox">
-          <Typography className="headerTitle">Search for books</Typography>
+          <Typography className="headerTitle" onClick={handleNavHome}>
+            Book Archipelago: Islands of Words in Your Hands
+          </Typography>
           <Box className="inputBox">
             <CustomInput />
           </Box>

@@ -3,12 +3,16 @@ import { useEffect, useState } from "react";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { Item } from "../../utils/types";
 import "./index.css";
+
 const SelectedBook: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
   const result = useLocalStorage("get", "selectedItem", undefined);
+
   useEffect(() => {
     setSelectedItem(result);
-  }, [result]);
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <Box className="selectedBookContainer">
       <Box className="imageBox">
@@ -40,11 +44,16 @@ const SelectedBook: React.FC = () => {
         {Array.isArray(selectedItem?.volumeInfo?.authors) &&
           selectedItem?.volumeInfo.authors.map((author, i) => (
             <Typography className="bookAuthor" key={i}>
-              {author}
+              Author: {author}
             </Typography>
           ))}
         <Box className="selBookDescription">
-          <Typography>{selectedItem?.volumeInfo?.description}</Typography>
+          <Typography>
+            Description :{" "}
+            {selectedItem?.volumeInfo?.description
+              ? selectedItem?.volumeInfo?.description
+              : "Non specified"}
+          </Typography>
         </Box>
       </Box>
     </Box>
